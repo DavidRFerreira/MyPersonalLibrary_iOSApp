@@ -3,7 +3,7 @@
 ## Description
 MyPublicLibrary is an iOS app that allows you to manage your personal library by letting you keep track of the books you own. You can also add information about the book, check if you already read the book or not and if you lent it someone. 
 
-## Disclaimer
+## Note
 Although the app is already working with it's basic functionalities, I'm still working on it in order to bring more and new things.  
 
 ## Screenshots
