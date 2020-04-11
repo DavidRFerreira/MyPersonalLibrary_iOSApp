@@ -9,8 +9,8 @@ Although the app is already working with it's basic functionalities, I'm still w
 ## Screenshots
 
 <p float="middle">
- <img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1.png" width="470" height="470"> 
-  <img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2.png" width="470" height="470">
+ <img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1.png" width="460" height="460"> 
+  <img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2.png" width="460" height="460">
 </p>
 
 <img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen3.png" width="490" height="490">
