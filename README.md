@@ -19,6 +19,6 @@ To create this app I used:
 - MVC
 
 ## Credits
-[Book icon](https://icons8.com/icon/42763/book) by [Icons8](https://icons8.com/)
-[Settings icon](https://icons8.com/icon/364/settings) by [Icons8](https://icons8.com/)
-[Search icon](https://icons8.com/icon/set/search/ios) by [Icons8](https://icons8.com/)
+[Book icon](https://icons8.com/icon/42763/book) by [Icons8](https://icons8.com/) <br />
+[Settings icon](https://icons8.com/icon/364/settings) by [Icons8](https://icons8.com/)  <br /> 
+[Search icon](https://icons8.com/icon/set/search/ios) by [Icons8](https://icons8.com/)  <br />
