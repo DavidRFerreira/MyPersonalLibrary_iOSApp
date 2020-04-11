@@ -7,11 +7,11 @@ MyPublicLibrary is an iOS app that allows you to manage your personal library by
 Although the app is already working with it's basic functionalities, I'm still working on it in order to bring more and new things.  
 
 ## Screenshots
-<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1.png" width="1000" height="100">
+<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1.png" width="1000" height="1000">
 
-<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2.png" width="1000" height="100">
+<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2.png" width="1000" height="1000">
 
-<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen3.png" width="1000" height="100">
+<img src="https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen3.png" width="1000" height="1000">
 
 
 ## Technologies and Concepts Used
