@@ -14,8 +14,8 @@ Although the app is already working with it's basic functionalities, I'm still w
 ## Technologies and Concepts Used
 To create this app I used: 
 - CocoaPods: 
-  - RealmSwift
-  - SwipeCellKit
+  - [RealmSwift](https://cocoapods.org/pods/RealmSwift)
+  - [SwipeCellKit](https://cocoapods.org/pods/SwipeCellKit)
 - MVC
 
 ## Credits
