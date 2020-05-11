@@ -9,7 +9,7 @@ Although the app is already working with it's basic functionalities, I'm still w
 
 ## Technologies and Concepts Used
 The data storage is built using the Realm database platform. <br /> 
-The app can use the Google Books API in order to search and retrieve the book's information (other option is to insert the information manually).
+The app can use the Google Books API in order to search and retrieve the book's information (other option is to manually insert the information).
 
 To create this app I used: 
 - CocoaPods: 
