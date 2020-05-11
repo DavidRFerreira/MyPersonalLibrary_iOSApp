@@ -9,6 +9,7 @@ Although the app is already working with it's basic functionalities, I'm still w
 ## Screenshots
 ![firstScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1.png) ![secondScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2.png)
 ![thirdScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen3.png)
+![forthScreenShot]()
 
 
 ## Technologies and Concepts Used
@@ -16,9 +17,12 @@ To create this app I used:
 - CocoaPods: 
   - [RealmSwift](https://cocoapods.org/pods/RealmSwift)
   - [SwipeCellKit](https://cocoapods.org/pods/SwipeCellKit)
+  - [Alamofire](https://cocoapods.org/pods/Alamofire)
+  - [SwiftyJSON](https://cocoapods.org/pods/SwiftyJSON)
 - MVC
 
 ## Credits
 [Book icon](https://icons8.com/icon/42763/book) by [Icons8](https://icons8.com/) <br />
 [Settings icon](https://icons8.com/icon/364/settings) by [Icons8](https://icons8.com/)  <br /> 
 [Search icon](https://icons8.com/icon/set/search/ios) by [Icons8](https://icons8.com/)  <br />
+[Book Cover Default](https://photoartinc.com/stock-photos-for-book-covers-2/)
