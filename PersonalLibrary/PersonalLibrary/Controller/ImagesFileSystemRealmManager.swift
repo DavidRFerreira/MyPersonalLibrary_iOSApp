@@ -24,6 +24,7 @@ enum StorageType
     case userDefaults
 }
 
+
 extension ImagesFileSystemRealmManager
 {
     
@@ -48,13 +49,15 @@ extension ImagesFileSystemRealmManager
         return nil
     }
     
+    
     func saveImageToFileSystem(ISBNKey : String, imagePassed : UIImageView, urlImageFilePath: inout String)
     {
         if let image = imagePassed.image
         {
             self.store(image: image,
                        forKey: ISBNKey,
-                       withStorageType: .fileSystem, urlImageFilePath: &urlImageFilePath)
+                       withStorageType: .fileSystem,
+                       urlImageFilePath: &urlImageFilePath)
         }
     }
     

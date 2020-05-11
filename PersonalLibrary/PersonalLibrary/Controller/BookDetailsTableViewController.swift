@@ -28,6 +28,12 @@ class BookDetailsTableViewController: UITableViewController
 
     var selectedBook : Book?
     
+    
+    
+    //****************************************************************************
+    //MARK: - UIView LifeCycle Methods
+    //****************************************************************************
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -35,6 +41,7 @@ class BookDetailsTableViewController: UITableViewController
         loadBookDetails()
     }
 
+    
     override func viewWillAppear(_ animated: Bool)
     {
         title = selectedBook?.bookTitle
@@ -47,12 +54,17 @@ class BookDetailsTableViewController: UITableViewController
         }
     }
     
+    
+    
+    //****************************************************************************
+    //MARK: - Update the UI Components
+    //****************************************************************************
+    
     func loadBookDetails()
     {
+        // Displays the selected book's information.
         
         var urlImagePath : String = ""
-        
-        var savedImage : UIImage
         
         labelBookTitle.text = selectedBook?.bookTitle
         labelAuthorName.text = selectedBook?.authorName
@@ -84,7 +96,7 @@ class BookDetailsTableViewController: UITableViewController
             labelBorrowerName.text = ""
         }
         
-         urlImagePath = String(selectedBook!.ISBN)
+        urlImagePath = String(selectedBook!.ISBN)
         
         if let image = self.retrieveImage(forKey: urlImagePath, inStorageType: .fileSystem)
         {
@@ -98,46 +110,63 @@ class BookDetailsTableViewController: UITableViewController
         }
     }
     
+    
+    
+    //****************************************************************************
+    //MARK: - Image Retrieving from FileSystem Methods
+    //****************************************************************************
+    
     enum StorageType
     {
         case fileSystem
-        case userDefaults
     }
-    
+
+
     private func retrieveImage(forKey key: String, inStorageType storageType: StorageType) -> UIImage?
     {
-        
+        // Retrieves and returns the image of the book.
+
         switch storageType
         {
         case .fileSystem:
-            
+
             if let filePath = self.filePath(forKey: key),
                 let fileData = FileManager.default.contents(atPath: filePath.path),
                 let image = UIImage(data: fileData)
             {
                 return image
             }
-        default:
-            print("The specified storageType is not available.")
         }
-        
+
         return nil
     }
-    
+
+
     private func filePath(forKey key: String) ->URL?
     {
+        // Builds the image url from where we are going to grab the front cover image.
+
         let fileManager = FileManager.default
-        
+
         guard let documentURL = fileManager.urls(for: .documentDirectory,
                                                  in: FileManager.SearchPathDomainMask.userDomainMask).first else {return nil}
-        
+
         return documentURL.appendingPathComponent(key + ".png")
     }
  
+    
+    
+    //****************************************************************************
+    //MARK: - Segue Methods.
+    //****************************************************************************
+    
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem)
     {
+        // This function is called the user presses the edit button.
+        
         performSegue(withIdentifier: "goToEditBookView", sender: self)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -150,3 +179,7 @@ class BookDetailsTableViewController: UITableViewController
     }
     
 }
+
+//extension BookDetailsTableViewController : ImagesFileSystemRealmManager
+//{
+//}

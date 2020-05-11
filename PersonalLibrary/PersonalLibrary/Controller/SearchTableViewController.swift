@@ -47,10 +47,9 @@ extension SearchTableViewController: UISearchBarDelegate
             !textToSearch.isEmpty
         {
             filterTableView(ind: searchBar.selectedScopeButtonIndex, text: textToSearch)
-            //books = realm.objects(Book.self).filter("bookTitle CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "bookTitle", ascending: true)
             
             DispatchQueue.main.async
-                {
+            {
                     self.tableView.reloadData()
             }
         }

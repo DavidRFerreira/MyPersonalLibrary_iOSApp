@@ -110,6 +110,10 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     }
     
     
+    //****************************************************************************
+    //MARK: - Alerts Methods
+    //****************************************************************************
+    
     
     //The implementation for this methods are provived on the derived class.
     func markLoanAlert(indexPath : IndexPath)
@@ -134,6 +138,10 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     {
     }
 }
+
+//****************************************************************************
+//MARK: - Extension UI Color
+//****************************************************************************
 
 extension UIColor
 {

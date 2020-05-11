@@ -15,13 +15,22 @@ class BookListTableViewController:  SwipeTableViewController
     
     var books : Results<Book>!
     
+    
+    //****************************************************************************
+    //MARK: - UIView LifeCycle Methods
+    //****************************************************************************
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-
     }
 
+    
+    
+    //****************************************************************************
+    //MARK: - TableView DataSource Methods
+    //****************************************************************************
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
@@ -66,7 +75,6 @@ class BookListTableViewController:  SwipeTableViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        
         return books?.count ?? 1
     }
     
@@ -76,9 +84,18 @@ class BookListTableViewController:  SwipeTableViewController
         return 165
     }
     
+    
+    
+    
+    //****************************************************************************
+    //MARK: - Alerts Methods
+    //****************************************************************************
+    
     override func markLoanAlert(indexPath : IndexPath)
     {
-        if (self.books?[indexPath.row].bookIsOnLoan == true)
+        // Displays an alert whether the book is being marked as returned or on loan (in the tableViewCell).
+        
+        if (self.books?[indexPath.row].bookIsOnLoan == true) // If it is being marked as returned.
         {
             let alertReturnedBook = UIAlertController(title: "Return Book", message: "The book was marked as returned.", preferredStyle: .alert)
             
@@ -86,7 +103,7 @@ class BookListTableViewController:  SwipeTableViewController
             
             self.present(alertReturnedBook, animated: true)
             
-            if let book = self.books?[indexPath.row]
+            if let book = self.books?[indexPath.row] // The database is updated.
             {
                 do
                 {
@@ -102,23 +119,25 @@ class BookListTableViewController:  SwipeTableViewController
                 }
             }
         }
-        else
+        else // If it is being borrowed.
         {
             let alertLendBook = UIAlertController(title: "Lend the Book", message: "The book was marked as on loan.", preferredStyle: .alert)
             
             alertLendBook.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
+            // Add a texfield in order for the user to enter the borrower's name.
             alertLendBook.addTextField(configurationHandler: {textField in
                 textField.placeholder = "Borrower's Name"
             })
             
             self.present(alertLendBook, animated: true)
             
+            // If the user confirms the information.
             alertLendBook.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 
                 if let name = alertLendBook.textFields?.first?.text
                 {
-                    if let book = self.books?[indexPath.row]
+                    if let book = self.books?[indexPath.row] // The database is updated.
                     {
                         do
                         {
@@ -138,6 +157,8 @@ class BookListTableViewController:  SwipeTableViewController
         }
     }
     
+    
+    
     override func returnBookIsOnLoanState(indexPath : IndexPath) -> Bool
     {
         return books[indexPath.row].bookIsOnLoan
@@ -148,7 +169,9 @@ class BookListTableViewController:  SwipeTableViewController
     
     override func markReadAlert(indexPath : IndexPath)
     {
-        if (self.books?[indexPath.row].bookWasRead == false)
+        // Displays an alert whether the book is being marked as read or unread (in the tableViewCell).
+        
+        if (self.books?[indexPath.row].bookWasRead == false) // If the book is being marked as unread.
         {
             let alertReadBook = UIAlertController(title: "Read Book", message: "The book was marked as read.", preferredStyle: .alert)
             
@@ -156,7 +179,7 @@ class BookListTableViewController:  SwipeTableViewController
             
             self.present(alertReadBook, animated: true)
             
-            if let book = self.books?[indexPath.row]
+            if let book = self.books?[indexPath.row] // The table view is going to be updated.
             {
                 do
                 {
@@ -171,7 +194,7 @@ class BookListTableViewController:  SwipeTableViewController
                 }
             }
         }
-        else
+        else // If the book is being marked as read.
         {
             let alertUnreadBook = UIAlertController(title: "Unread the Book", message: "The book was marked as not read.", preferredStyle: .alert)
             
@@ -205,7 +228,8 @@ class BookListTableViewController:  SwipeTableViewController
     
     override func deleteBookFromModel(indexPath: IndexPath)
     {
-        // Update our data model.
+        // Deletes a book and updates the database.
+        
         if let item = books?[indexPath.row]
         {
             do {
@@ -246,8 +270,8 @@ class BookListTableViewController:  SwipeTableViewController
         books = realm.objects(Book.self)
         
         DispatchQueue.main.async
-            {
-                self.tableView.reloadData()
+        {
+            self.tableView.reloadData()
         }
     }
     
