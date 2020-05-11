@@ -8,7 +8,7 @@ You can also add information about the book, check if you already read the book 
 Although the app is already working with it's basic functionalities, I'm still working on it in order to bring more and new things.  
 
 ## Technologies and Concepts Used
-The data storage is built using the Realm database platform.
+The data storage is built using the Realm database platform. <br /> 
 The app can use the Google Books API in order to search and retrieve the book's information.
 
 To create this app I used: 
