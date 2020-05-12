@@ -24,7 +24,7 @@ To create this app I used:
 ![firstScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1_iphonexspacegrey_portrait.png) 
 ![secondScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen2_iphonexspacegrey_portrait.png)
 ![thirdScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen3_iphonexspacegrey_portrait.png)
-![forthScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen4_iphonexspacegrey_portrait.png)
+![forthScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen4.jpg)
 
 ## Credits
 [Book icon](https://icons8.com/icon/42763/book) by [Icons8](https://icons8.com/) <br />
