@@ -18,7 +18,7 @@ To create this app I used:
   - [Alamofire](https://cocoapods.org/pods/Alamofire)
   - [SwiftyJSON](https://cocoapods.org/pods/SwiftyJSON)
 - MVC
-- [Google Books Api](https://developers.google.com/books)
+- [Google Books API](https://developers.google.com/books)
 
 ## Screenshots
 ![firstScreenShot](https://github.com/DavidRFerreira/MyPersonalLibrary_iOSApp/blob/master/Screenshots/screen1_iphonexspacegrey_portrait.png) 
