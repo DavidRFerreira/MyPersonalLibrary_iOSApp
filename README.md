@@ -18,6 +18,7 @@ To create this app I used:
   - [Alamofire](https://cocoapods.org/pods/Alamofire)
   - [SwiftyJSON](https://cocoapods.org/pods/SwiftyJSON)
 - MVC
+- Storyboards.
 - [Google Books API](https://developers.google.com/books)
 
 ## Screenshots
